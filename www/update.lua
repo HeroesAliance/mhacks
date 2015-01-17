@@ -28,12 +28,16 @@ if post and post.comment then
 	update.lastUpdate=socket.gettime()
 end
 
+if get.delete then
+	table.remove(update.comments,tonumber(get.delete))
+end
+
 for k,v in pairs(update.comments) do
 	print([[
 		<div style="border-style: solid; border-width: 4px; border-color:#000000; background-color:#303030; width:90%; margin: 0 auto; padding:16px;">
 			<div style="font-size:25px; color:#EEEEEE; vertical-align:top;">
 			]]..htmlencode(v[1])..[[</div>
-			<div style="font-size:15px; color:#CCCCCC;">]]..timeDiff(v[2])..[[</div>
+			<div style="font-size:15px; color:#CCCCCC;"><a href="update.lua?project=]]..id..[[&id=]]..uid..[[&delete=]]..k..[[">[delete]</a> ]]..timeDiff(v[2])..[[</div>
 		</div><br/>
 	]])
 end
