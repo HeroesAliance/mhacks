@@ -4,7 +4,7 @@ local d={
 }
 print(tm.header(d))
 print([[
-	<a href="newProject.lua"><div style="border-style: solid; border-width:4px; border-color:202020; background-color:#303030; width:10%; font-size:60px;">
+	<a href="newProject.lua"><div style="border-style: solid; border-width:4px; border-color:000000; background-color:#303030; width:10%; font-size:60px;">
 		<center>+</center>
 	</div></a><br>
 	<div style="overflow:hidden; width:100%;">
@@ -30,7 +30,7 @@ end
 
 for k,v in pairs(data.robots) do
 	print([[
-		<div style="border-style: solid; border-width: 4px; float:left; border-color:#202020; background-color:#404040; width:256px; height:290; padding:16px; margin-right:20px; margin-bottom:20px;"><a href="project.lua?id=]]..k..[[">
+		<div style="border-style: solid; border-width: 4px; float:left; border-color:#000000; background-color:#404040; width:256px; height:290; padding:16px; margin-right:20px; margin-bottom:20px;"><a href="project.lua?id=]]..k..[[">
 			<img src="]]..htmlencode(v.image)..[[" width=256 height=256/><br/>
 			<div style="font-size:40px; color:#DDDDDD;"><center>]]..htmlencode(v.name)..[[</center></div>
 		</a></div>

@@ -26,8 +26,8 @@ function tm.header(d)
 					}
 				</style>
 			</head>
-			<body style="background: url('http://i.imgur.com/baXjePq.png');">
-				<div style="text-shadow: 1px 1px 5px #000000; border-style: solid; border-width: 4px; border-color:#202020; background: url('http://i.imgur.com/XPgyxq8.png'); color:#DDDDDD; padding:16; padding-left:64px;">
+			<body style="background: url('http://i.imgur.com/uCt90pR.png');">
+				<div style="text-shadow: 1px 1px 5px #000000; border-style: solid; border-width: 4px; border-color:#000000; background: url('http://i.imgur.com/XPgyxq8.png'); color:#DDDDDD; padding:16; padding-left:64px;">
 					<div style="float:left; font-size:30px; padding-top:20px;">
 						]]..d.title..[[
 					</div>

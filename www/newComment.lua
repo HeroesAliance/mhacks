@@ -11,7 +11,7 @@ local d={
 print(tm.header(d))
 
 print([[
-<div style="border-style: solid; border-width: 4px; border-color:#202020; background-color:#303030; padding:16px;">
+<div style="border-style: solid; border-width: 4px; border-color:#000000; background-color:#303030; padding:16px;">
 	<form action="update.lua?project=]]..id..[[&id=]]..uid..[[" method="post"><table>
 		<tr><td style="font-size: 30px; color:#DDDDDD;">Comment: </td><td><textarea type="text" name="comment" rows="6" cols="50" style="line-height: 30px; font-size: 25px;"></textarea></td></tr>
 		<tr><td></td><td><input type="submit" value="Submit" style="font-size: 25px;"></td></tr>
