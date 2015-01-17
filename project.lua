@@ -5,6 +5,9 @@ function tm.header(d)
 			<head>
 				<title>]]..d.wtitle..[[</title>
 				<style>
+					body {
+						font-family:Arial, Helvetica, sans-serif
+					}
 					a:link {
 						color: #DDDDDD;
 						text-decoration: none;
@@ -21,17 +24,16 @@ function tm.header(d)
 						color: #DDDDDD;
 						text-decoration: none;
 					}
-					font-family: Verdana, sans-serif;
 				</style>
 			</head>
-			<body style="background-color: #DDDDDD;">
-				<div style="border-style: solid; border-width: 4px; border-color:#FFFFFF; background-color: #202020; color:#DDDDDD; padding:16; padding-left:64px;">
-					<div style="float:left;">
-						<h1>]]..d.title..[[</h1>
+			<body style="background: url('http://i.imgur.com/baXjePq.png');">
+				<div style="text-shadow: 1px 1px 5px #000000; border-style: solid; border-width: 4px; border-color:#202020; background: url('http://i.imgur.com/XPgyxq8.png'); color:#DDDDDD; padding:16; padding-left:64px;">
+					<div style="float:left; font-size:30px; padding-top:20px;">
+						]]..d.title..[[
 					</div>
 					<div style="float:right; margin-top: 24px; margin-right: 24px;">
 						<form action="search.lua" method="post">
-							<input type="text" name="query" style="line-height: 30px; font-size: 25px;"/>
+							<input type="text" name="query" value="]]..(d.searchtext or "")..[[" style="line-height: 30px; font-size: 25px;"/>
 							<input type="submit" value="Search" style="font-size: 25px;">
 						</form>
 					</div>
@@ -128,6 +130,12 @@ data={
 					topic="Pushed to github!",
 					comments={},
 					created=socket.gettime()-6000,
+				},
+				{
+					image="http://puu.sh/eEdtl.png",
+					topic="Added search feature",
+					comments={},
+					created=socket.gettime()-5000,
 				},
 			},
 			name="This website",

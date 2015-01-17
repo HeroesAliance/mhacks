@@ -8,9 +8,11 @@ local d={
 
 print(tm.header(d))
 print([[
-	<a href="newUpdate.lua?id=]]..id..[["><div style="border-style: solid; border-width: 4px; border-color:FFFFFF; background-color:#00EE00; padding:8px; font-size:48px;"><center>
-		<img src="http://i.imgur.com/JtK1Hz9.png"/><br/>
-	</center></div></a><br>
+	<a href="newUpdate.lua?id=]]..id..[[">
+		<div style="border-style: solid; border-width: 4px; border-color:202020; background-color:#303030; width:10%; font-size:60px;">
+			<center>+</center>
+		</div>
+	</a><br>
 ]])
 
 if post then
@@ -37,7 +39,7 @@ end)
 
 for k,v in pairs(updates) do
 	print([[
-		<div style="border-style: solid; position: relative; border-width: 4px; border-color:FFFFFF; background-color:#202020; width:128px; width:90%; margin: 0 auto; padding:16px;"><a href="update.lua?project=]]..id..[[&id=]]..v.index..[[">
+		<div style="border-style: solid; position: relative; border-width: 4px; border-color:202020; background-color:#303030; width:128px; width:90%; margin: 0 auto; padding:16px;"><a href="update.lua?project=]]..id..[[&id=]]..v.index..[[">
 			<div style="font-size:25px; color:#EEEEEE; vertical-align:bottom;"><img src="]]..htmlencode(v.image)..[[" width=128 height=128 style="float:left; margin-right:16px;"/>
 			<div style="font-size:14px; color:#CCCCCC;">]]..timeDiff(v.created)..[[</div>]]..htmlencode(v.topic)..[[</div>
 			]]..(next(v.comments) and ([[<div style="font-size:30px; color:#EEEEEE; position:relative; bottom:0; float:right;"><img src="http://i.imgur.com/FkYz7KX.png" style="margin-right:8px;"/>]]..#v.comments..[[</div>]]) or "")..[[

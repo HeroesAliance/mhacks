@@ -10,7 +10,7 @@ local d={
 print(tm.header(d))
 
 print([[
-	<div style="border-style: solid; border-width: 4px; border-color:#FFFFFF; background-color:#202020; width:90%; margin: 0 auto; padding:16px;">
+	<div style="border-style: solid; border-width: 4px; border-color:#202020; background-color:#303030; width:90%; margin: 0 auto; padding:16px;">
 		<div style="font-size:25px; color:#EEEEEE; vertical-align:top;"><img src="]]..htmlencode(update.image)..[[" width=256 height=256 style="float:left; margin-right:16px;"/>
 		<div style="font-size:15px; color:#CCCCCC;">]]..timeDiff(update.created)..[[</div>]]..htmlencode(update.topic)..[[</div>
 		<div class="spacer" style="clear: both;"></div>
@@ -18,9 +18,9 @@ print([[
 ]])
 
 print([[
-	<center><a href="newComment.lua?project=]]..id..[[&id=]]..uid..[["><div style="border-style: solid; border-width: 4px; border-color:FFFFFF; background-color:#00EE00; width:10%; padding:8px; font-size:48px;">
-		<img src="http://i.imgur.com/JtK1Hz9.png"/><br/>
-	</div></a></center><br>
+	<a href="newComment.lua?project=]]..id..[[&id=]]..uid..[["><div style="border-style: solid; border-width: 4px; border-color:202020; background-color:#303030; width:10%; font-size:60px;">
+		<center>+</center>
+	</div></a><br>
 ]])
 
 if post and post.comment then
@@ -30,7 +30,7 @@ end
 
 for k,v in pairs(update.comments) do
 	print([[
-		<div style="border-style: solid; border-width: 4px; border-color:#FFFFFF; background-color:#202020; width:90%; margin: 0 auto; padding:16px;">
+		<div style="border-style: solid; border-width: 4px; border-color:#202020; background-color:#303030; width:90%; margin: 0 auto; padding:16px;">
 			<div style="font-size:25px; color:#EEEEEE; vertical-align:top;">
 			]]..htmlencode(v[1])..[[</div>
 			<div style="font-size:15px; color:#CCCCCC;">]]..timeDiff(v[2])..[[</div>
