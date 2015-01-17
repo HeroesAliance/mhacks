@@ -26,7 +26,16 @@ function tm.header(d)
 			</head>
 			<body style="background-color: #DDDDDD;">
 				<div style="border-style: solid; border-width: 4px; border-color:#FFFFFF; background-color: #202020; color:#DDDDDD; padding:16; padding-left:64px;">
-					<h1>]]..d.title..[[</h1>
+					<div style="float:left;">
+						<h1>]]..d.title..[[</h1>
+					</div>
+					<div style="float:right; margin-top: 24px; margin-right: 24px;">
+						<form action="search.lua" method="post">
+							<input type="text" name="query" style="line-height: 30px; font-size: 25px;"/>
+							<input type="submit" value="Search" style="font-size: 25px;">
+						</form>
+					</div>
+					<div class="spacer" style="clear: both;"></div>
 				</div><br/>
 	]]
 end
@@ -112,7 +121,13 @@ data={
 					image="http://i.imgur.com/vcsSWN9.jpg",
 					topic="Changes are now sorted by last comment\nComments are now inserted to the beginning rather than end\npic unrelated",
 					comments={},
-					created=socket.gettime()-8000,
+					created=socket.gettime()-7000,
+				},
+				{
+					image="https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png",
+					topic="Pushed to github!",
+					comments={},
+					created=socket.gettime()-6000,
 				},
 			},
 			name="This website",

@@ -1,5 +1,28 @@
-MHacks project
+webserver
 =========
-description: a website that allows a team to manage and track the progrss of projects easialy
 
-apis used: my lua webserver (everything in the lua directory)
+even less fail webserver
+
+Features:
+
+fast
+
+configurable port
+
+configurable domains
+
+scriptable
+
+fs cache
+
+TODO:
+
+optimize with C code
+
+multithreading
+
+async I/O
+
+redirecting socket
+
+more RFC
