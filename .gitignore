@@ -1,4 +1,0 @@
-config.txt
-#This way, you can have custom settings for things.
-www/
-#Block off the www folder -- Now your websites aren't pushed.
