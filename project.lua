@@ -6,7 +6,8 @@ function tm.header(d)
 				<title>]]..d.wtitle..[[</title>
 				<style>
 					body {
-						font-family:Arial, Helvetica, sans-serif
+						font-family:Arial, Helvetica, sans-serif;
+						text-shadow: 1px 1px 5px #000000;s
 					}
 					a:link {
 						color: #DDDDDD;
@@ -65,7 +66,11 @@ function timeDiff(t)
 	end
 end
 
-data={
+if fs.exists("projectsave") then
+	data=loadstring("return "..fs.read("projectsave"))()
+end
+
+data=data or {
 	robots={
 		{
 			updates={
@@ -144,13 +149,6 @@ data={
 	}
 }
 
-function newRobot(name,pic)
-	local o={
-		projects={},
-		newProject=function()
-			
-		end
-	}
-	table.insert(data.robots,o)
-	
+function save()
+	fs.write("projectsave",serialize(data))
 end

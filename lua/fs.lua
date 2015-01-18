@@ -97,5 +97,10 @@ fs={
 	end,
 	read=function(file)
 		return getFile(file)
-	end
+	end,
+	write=function(file,txt)
+		local f=assert(io.open(file,"w"))
+		f:write(txt)
+		f:close()
+	end,
 }
